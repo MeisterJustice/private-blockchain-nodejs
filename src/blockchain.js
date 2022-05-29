@@ -63,18 +63,24 @@ class Blockchain {
   _addBlock(block) {
     let self = this;
     return new Promise(async (resolve, reject) => {
-      block.height = self.chain.length;
+      // get current height
+      const currentBlockHeight = self.getChainHeight();
+      block.height = currentBlockHeight + 1;
       block.time = new Date().getTime().toString().slice(0, -3);
-      if (self.chain.length > 0) {
+      if (currentBlockHeight > 0) {
         block.previousBlockHash = self.chain[self.chain.length - 1].hash;
       }
       block.hash = SHA256(JSON.stringify(block)).toString();
-      console.log(block.hash);
 
-      self.chain.push(block);
+      // Validate block for link in sync check
+      let isValid = await self.validateChain();
+
+      if (isValid) {
+        self.chain.push(block);
+        self.height = block.height;
+      }
 
       if (block) {
-        self.height += 1;
         resolve(block);
       }
       reject(new Error("an error occured!"));
