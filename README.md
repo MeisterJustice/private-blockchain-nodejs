@@ -1,3 +1,6 @@
+# Private Blockchain
+
+
 ## What problem will you solve implementing this private Blockchain application?
 
 Your employer is trying to make a test of concept on how a Blockchain application can be implemented in his company.
@@ -28,8 +31,6 @@ too but making sure the application know who owned each star.
 
 - This application will be created using Node.js and Javascript programming language. The architecture will use ES6 classes
 because it will help us to organize the code and facilitate the maintnance of the code.
-- The company suggest to use Visual Studio Code as an IDE to write your code because it will help you debug the code easily
-but you can choose the code editor you feel confortable with.
 - Some of the libraries or npm modules you will use are:
     - "bitcoinjs-lib": "^4.0.3",
     - "bitcoinjs-message": "^2.0.0",
@@ -38,7 +39,6 @@ but you can choose the code editor you feel confortable with.
     - "express": "^4.16.4",
     - "hex2ascii": "0.0.3",
     - "morgan": "^1.9.1"
-    Remember if you need install any other library you will use `npm install <npm_module_name>`
 
 Libraries purpose:
 
@@ -166,7 +166,6 @@ You can check in your terminal the the Express application is listening in the P
 ## How to test your application functionalities?
 
 To test your application I recommend you to use POSTMAN, this tool will help you to make the requests to the API.
-Always is useful to debug your code see what is happening in your algorithm, so I will let you this video for you to check on how to do it >https://www.youtube.com/watch?v=6cOsxaNC06c . Try always to debug your code to understand what you are doing.
 
 1. Run your application using the command `node app.js`
 You should see in your terminal a message indicating that the server is listening in port 8000:
@@ -181,4 +180,4 @@ You should see in your terminal a message indicating that the server is listenin
 5. Submit your Star
      ![Request: http://localhost:8000/submitstar](https://s3.amazonaws.com/video.udacity-data.com/topher/2019/April/5ca365d3_signing-message/signing-message.png)
 6. Retrieve Stars owned by me
-    ![Request: http://localhost:8000/blocks/<WALLET_ADDRESS>](https://s3.amazonaws.com/video.udacity-data.com/topher/2019/April/5ca362b9_retrieve-stars/retrieve-stars.png)# private-blockchain-nodejs
+    ![Request: http://localhost:8000/blocks/<WALLET_ADDRESS>](https://s3.amazonaws.com/video.udacity-data.com/topher/2019/April/5ca362b9_retrieve-stars/retrieve-stars.png)
