@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Udacity - jose.morales@udacity.com",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bitcoinjs-lib": "^4.0.5",
